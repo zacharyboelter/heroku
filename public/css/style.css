@@ -1,0 +1,29 @@
+html {
+    
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."
+      ". . ."; 
+  }
+
+img {
+    width: 30%; /* you can use % */
+    height: auto;
+    display: block;
+    max-width: 100%;
+
+}
+

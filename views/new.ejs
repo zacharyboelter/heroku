@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     <title>Product List</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -22,17 +23,18 @@
 </head>
 
 <body class="container">
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Home</a>
-        </div>
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/products">All Entries</a>
-        </div>
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/products/new">Add a New Entry</a>
-        </div>
-    </nav>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products">All Entries</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products/new">Add New Entry</a>
+        </li>
+    </ul>
+
     <h1>New Product Page</h1>
     <hr>
     <form action="/products" method="POST">
@@ -46,7 +48,10 @@
 
         <div class="form-group">
             <label for="">Price </label> <input class="form-control" type="number" name="price" /><br />
+        </div>
 
+        <div class="form-group">
+            <label for="">Pairs Best With </label> <input class="form-control" type="text" name="pairing" /><br />
         </div>
 
         <div class="form-group">

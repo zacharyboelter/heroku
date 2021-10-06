@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>Edit Product</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -20,7 +20,7 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="container">
+<body id=body class="container">
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -31,45 +31,11 @@
         <li class="nav-item">
             <a class="nav-link" href="/products/new">Add New Entry</a>
         </li>
-
     </ul>
-    <h1>Edit Product</h1>
-    <form action="/products/<%=product._id%>?_method=PUT" method="POST">
-        <!-- pre filled out forms -->
-        <div class="form-group">
-            <label> Name</label>
-            <input class="form-control" type="text" name="name" value="<%=product.name%>" />
-        </div> <br />
-
-        <div class="form-group">
-            <label for="">Description </label>
-            <input class="form-control" type="text" name="description" value="<%=product.description%>" />
-        </div> <br />
-
-        <div class="form-group">
-            <label for="">Pairing </label>
-            <input class="form-control" type="text" name="description" value="<%=product.pairing%>" />
-        </div> <br />
-
-        <div class="form-group">
-            <label for="">Img </label>
-            <input class="form-control" type="text" name="img" value="<%= product.img %>">
-        </div> <br />
-
-        <div class="form-group">
-            <label for="">Price </label>
-            <input class="form-control" type="number" name="price" value="<%=product.price%>">
-        </div> <br />
 
 
-        <div class="form-group">
-            <label for="">Variety </label>
-            <input class="form-control" type="text" name="qty" value="<%=product.variety%>">
-        </div> <br />
 
 
-        <input class="btn-lg" type="submit" value="Submit Changes" />
-    </form>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Index</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -18,46 +19,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
-
 </head>
 
 <body class="container">
-
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Home</a>
-        </div>
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/products">All Entries</a>
-        </div>
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/products/new">Add a New Entry</a>
-        </div>
-    </nav>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products">All Entries</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products/new">Add New Entry</a>
+        </li>
+    </ul>
     <header>
-        <h1 class="page-header">Wine Notes<small></small></h1>
+        <h1 class="page-header">All Entries<small> / Wine Notes</small></h1>
     </header>
     <main>
         <ul class="list-inline">
-            <!-- <fieldset> -->
             <% products.forEach(product=> { %>
                 <div class="col-sm">
                     <li class="col">
-
-
-                       
-
                         <a class="link" href="/products/<%= product._id; %>">
-                            
                             <%=product.name; %>
                         </a>
-                        
-                        
-                            <hr>
+                        <hr>
                     </li>
                     <% }) %>
                 </div>
-                <!-- </fieldset> -->
         </ul>
     </main>
 </body>

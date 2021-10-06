@@ -70,21 +70,45 @@ app.get('/products/seed', (req, res) => {
       {
         name: 'Vinedos La Consulta Adelante Malbec',
         description: 'Extremely popular, Argentinian Malbec is an inky, medium-bodied, dry red wine with strong impressions of dark fruits on the nose and palate. This wine tends to have mellower tannins than its French counterpart.',
+        pairing: 'Fajitas, chili, spicy foods. Indian or Mexican. Beef, lamb or pork most anyway but especially on the grill. Burgers and sausages.',
         variety: 'Malbec',
         img: 'https://i.imgur.com/IpzO6Ae.jpg',
         price: 15
       }, {
         name: '"So Far Out" Chillable Red',
-        description: 'Chillable, sustainably and organically farmed, flavorful dark red fruits, herbs, forest floor, spicy, aromatic, fresh, beguiling.',
+        description: 'So Far Out Chillable Red is a red natural wine made from organically farmed grapes grown in California. This is a blend of 65% Malbec and 35% Riesling; the Malbec was destemmed and pressed, Riesling underwent 7 days of carbonic maceration before pressing. The wine was aged in neutral oak and stainless steel. Serving temperature: 60 F.',
+        pairing: 'Salad, Seafood, Tacos',
         variety: 'malbec',
         img: 'https://i.imgur.com/j9Puc1e.jpg',
         price: 25
       }, {
         name: 'Domaine de la Patience Rouge',
         description: 'Natural. Organic. Chillable. Dry. Fresh. Juicy. Minerally. Dark red fruit.',
+        pairing: 'Seafood dishes, hearty garden salads, grilled vegetables, soft-ripened cheeses, or simply by itself. ',
         variety: 'carignan',
         img: 'https://i.imgur.com/L0psJwn.jpg',
         price: 13
+      }, {
+        name: 'Domaine de la Patience Rouge',
+        description: 'Natural. Organic. Chillable. Dry. Fresh. Juicy. Minerally. Dark red fruit.',
+        pairing: 'Seafood dishes, hearty garden salads, grilled vegetables, soft-ripened cheeses, or simply by itself. ',
+        variety: 'carignan',
+        img: 'https://i.imgur.com/L0psJwn.jpg',
+        price: 13
+      }, {
+        name: 'Les Deux Moulins Rose de Loire',
+        description: 'Crafted from traditional Loire Valley varieties, the wines of Les Deux Moulins are as delicious as they are affordable. This rosé is a blend of Grolleau, Gamay, and Cabernet Franc, marked by floral-driven notes of grapefruit, ripe stone fruit, and crushed rocks. Dry, delicious, and crowd-pleasing-- a total steal for the price!',
+        pairing: 'Salad, Seafood, Tacos',
+        variety: 'cabernet franc',
+        img: 'https://i.imgur.com/lDWg1ep.jpg',
+        price: 15
+      }, {
+        name: 'Pool Party Rosé',
+        description: 'Organic Central Coast Grenchace/Mourvedre rose. Tart cranberry, balanced, super fresh, super drinkable. ',
+        pairing: 'Light salads, light pasta and rice dishes, especially with seafood, raw and lightly cooked shellfish and grilled fish and goats’ cheeses. Perfect hot weather drinking.',
+        variety: 'cabernet franc',
+        img: 'https://i.imgur.com/XqMG5DK.jpg',
+        price: 17
       }
     ]
     ,
@@ -97,7 +121,12 @@ app.get('/products/seed', (req, res) => {
 // ===========================================================
 // ROUTES
 // ===========================================================
-
+// ===========================================================
+// HOME - Landing page
+// ===========================================================
+app.get('/', (req, res) => {
+  res.render('home.ejs');
+});
 
 // ===========================================================
 // INDEX - Display all products

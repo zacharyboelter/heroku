@@ -1,5 +1,4 @@
 html {
-    
     scroll-behavior: smooth;
   }
 
@@ -8,22 +7,12 @@ body {
     box-sizing: border-box;
 }
 
-.content-container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
-    gap: 10px 10px; 
-    grid-template-areas: 
-      ". . ."
-      ". . ."
-      ". . ."; 
-  }
-
 img {
-    width: 30%; /* you can use % */
+    width: 30%;
     height: auto;
-    display: block;
     max-width: 100%;
-
 }
 
+body {
+    
+}

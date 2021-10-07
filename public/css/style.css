@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    font-size: 1rem;
   }
 
 body {
@@ -12,7 +13,37 @@ img {
     height: auto;
     max-width: 100%;
 }
-
-body {
-    
+.button1, .button2 {
+    display: inline-block;
 }
+
+#home-header {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#delete-btn {
+    text-align: center;
+}
+
+.home-content {
+    text-align: center;
+}
+
+@include media-breakpoint-up(sm) {
+    html {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    html {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    html {
+      font-size: 1.6rem;
+    }
+  }

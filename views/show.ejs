@@ -37,34 +37,36 @@
 </nav>
 
 <body class="container"></body>
-<h1>
-    <%=product.name %>
-</h1>
-Price: $<%= product.price%>
-    <hr>
-    Notes: <%= product.description%>
+<div class="home-content">
+    <h1>
+        <%=product.name %>
+    </h1>
+    Price: $<%= product.price%>
         <hr>
-        <br />
-        Pairing: <%= product.pairing%>
+        Notes: <%= product.description%>
             <hr>
-            <br>
-            <img class="img-thumbnail" src="<%= product.img %>">
             <br />
+            Pairing: <%= product.pairing%>
+                <hr>
+                <br>
+                <img class="img-thumbnail" src="<%= product.img %>">
+                <br />
 
-            <br>
-            <div class="row">
+                <br>
+                <div >
 
-                <div class="col-md-1">
-                    <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                    <div class="button2">
+                        <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
 
-                        <input class="btn btn-danger" type="submit" value="DELETE" />
-                    </form>
+                            <input  class="btn btn-danger" type="submit" value="DELETE" />
+                        </form>
+                    </div>
+
+                    <div class="button1">
+                        <a class="btn btn-default" href="/products/<%=product._id%>/edit">Edit</a>
+                    </div>
                 </div>
-
-                <div class="col-md-10">
-                    <a class="btn btn-default" href="/products/<%=product._id%>/edit">Edit</a>
-                </div>
-            </div>
-            </body>
+</div>
+</body>
 
 </html>

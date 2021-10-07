@@ -9,6 +9,7 @@ const productSchema = new mongoose.Schema({
     pairing: String,
     img: String,
     price: { type: Number, required: true }
+    // add country of origin. 
 });
 
 // Set the whole schema to var named 'Product'
